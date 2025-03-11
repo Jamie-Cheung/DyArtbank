@@ -45,7 +45,7 @@ such as: nohup accelerate launch train.py --train_data_dir=Artworks/monet_water-
 
 A more comprehensive list of command arguments is shown in `train.sh`
 
-You also can download our pre-trained model from https://drive.google.com/drive/folders/16ZQUhz1wzBoQUnBiMgjTsTyBK2mY4c5v?usp=drive_link
+You also can download our pre-trained model from https://pan.quark.cn/s/71aa26c4d241
 
 ### Generate random style images
 
