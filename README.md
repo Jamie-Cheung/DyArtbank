@@ -115,4 +115,4 @@ cszzj@zju.edu.cn
 
 ### Acknowledgement
 
-We borrow code from [Hugging Face diffusers](https://arxiv.org/abs/2312.14216) and [Learning to Prompt for Vision-Language Models](https://arxiv.org/abs/2109.01134) ([CoOp](https://github.com/KaiyangZhou/CoOp)). We thank the authors and the open source contributors for their work and contribution.
+We borrow code from [Hugging Face diffusers](https://arxiv.org/abs/2312.14216), [Dreamdistribution](https://github.com/briannlongzhao/DreamDistribution) and [Learning to Prompt for Vision-Language Models](https://arxiv.org/abs/2109.01134) ([CoOp](https://github.com/KaiyangZhou/CoOp)). We thank the authors and the open source contributors for their work and contribution.
