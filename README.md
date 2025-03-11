@@ -99,12 +99,12 @@ python generate.py \
   }
 
 
-## Contact
+### Contact
 
 Please feel free to open an issue or contact us personally if you have questions, need help, or need explanations. Write to one of the following email addresses, and maybe put one other in the cc:
 
 cszzj@zju.edu.cn
 
-## Acknowledgement
+### Acknowledgement
 
 We borrow code from [Hugging Face diffusers](https://arxiv.org/abs/2312.14216) and [Learning to Prompt for Vision-Language Models](https://arxiv.org/abs/2109.01134) ([CoOp](https://github.com/KaiyangZhou/CoOp)). We thank the authors and the open source contributors for their work and contribution.
