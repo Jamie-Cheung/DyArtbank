@@ -45,6 +45,7 @@ A more comprehensive list of command arguments is shown in `train.sh`
 
 nohup accelerate launch train.py --train_data_dir=Artworks/monet_water-lilies-1914 --output_dir=output-monet
 
+You also can download our pre-trained model from https://drive.google.com/drive/folders/16ZQUhz1wzBoQUnBiMgjTsTyBK2mY4c5v?usp=drive_link
 ### Generate
 
 Assume your checkpoint is saved at `output/final-1000.pt`.
@@ -97,9 +98,11 @@ python generate.py \
   year={2025},
   publisher={Elsevier}
   }
+  ```
 
 
-### Contact
+
+## Contact
 
 Please feel free to open an issue or contact us personally if you have questions, need help, or need explanations. Write to one of the following email addresses, and maybe put one other in the cc:
 
