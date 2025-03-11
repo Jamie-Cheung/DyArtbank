@@ -34,18 +34,19 @@ pip install -r requirements.txt
 
 ### Training
 
-Place your reference images in a directory, for example `sample_images/cathedral/`, then run the following:
+Place your reference images in a directory, for example `Artworks/monet_water-lilies-1914`, then run the following:
 
 ```shell
-accelerate launch train.py \
-  --train_data_dir=sample_images/cathedral/ \
+  accelerate launch train.py \
+  --train_data_dir=Artworks/monet_water-lilies-1914 \
   --output_dir=output
 ```
+such as: nohup accelerate launch train.py --train_data_dir=Artworks/monet_water-lilies-1914 --output_dir=output-monet
+
 A more comprehensive list of command arguments is shown in `train.sh`
 
-nohup accelerate launch train.py --train_data_dir=Artworks/monet_water-lilies-1914 --output_dir=output-monet
-
 You also can download our pre-trained model from https://drive.google.com/drive/folders/16ZQUhz1wzBoQUnBiMgjTsTyBK2mY4c5v?usp=drive_link
+
 ### Generate
 
 Assume your checkpoint is saved at `output/final-1000.pt`.
@@ -59,8 +60,10 @@ python generate.py \
   --bsz=4
 ```
 
+w/o Controlnet
 python generate.py --weights_path=output/final-50000.pt --output_dir=output_images --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1" --n_images=50 --bsz=4 --customize_prefix="a painting of" --customize_suffix="Vangogh style"
 
+w/ Controlnet
 CUDA_VISIBLE_DEVICES=1 python generate-control-file.py --weights_path=output-monet/final-50000.pt --output_dir=comparison_output_images_monet --pretrained_model_name_or_path="/home/zzj/.cache/huggingface/diffusers/models--runwayml--stable-diffusion-v1-5/snapshots/39593d5650112b4cc580433f6b0435385882d819" --n_images=5 --bsz=4
 
 Generate with scaled standard deviation:
@@ -102,7 +105,7 @@ python generate.py \
 
 
 
-## Contact
+### Contact
 
 Please feel free to open an issue or contact us personally if you have questions, need help, or need explanations. Write to one of the following email addresses, and maybe put one other in the cc:
 
