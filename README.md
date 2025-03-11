@@ -47,7 +47,7 @@ A more comprehensive list of command arguments is shown in `train.sh`
 
 You also can download our pre-trained model from https://drive.google.com/drive/folders/16ZQUhz1wzBoQUnBiMgjTsTyBK2mY4c5v?usp=drive_link
 
-### Generate
+### Generate random style images
 
 Assume your checkpoint is saved at `output/final-1000.pt`.
 
@@ -59,15 +59,6 @@ python generate.py \
   --n_images=50 \
   --bsz=4
 ```
-
-w/o Controlnet
-
-python generate.py --weights_path=output-monet/final-50000.pt --output_dir=output_images-monet --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1" --n_images=50 --bsz=4 --customize_prefix="a painting of" --customize_suffix="Monet style"
-
-w/ Controlnet
-
-CUDA_VISIBLE_DEVICES=1 python generate-control-file.py --weights_path=output/final-50000.pt --output_dir=output_images-monet --pretrained_model_name_or_path="/home/zzj/.cache/huggingface/diffusers/models--runwayml--stable-diffusion-v1-5/snapshots/39593d5650112b4cc580433f6b0435385882d819" --n_images=5 --bsz=4
-
 Generate with scaled standard deviation:
 ```shell
 python generate.py \
@@ -79,17 +70,12 @@ python generate.py \
   --std_scale=2.0
 ```
 
-Generate composition of multiple prompt distributions:
-```shell
-python generate.py \
-  --weights_path output1/final-1000.pt output2/final-1000.pt \
-  --output_dir=output_images \
-  --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1" \
-  --n_images=50 \
-  --bsz=4 \
-  --std_scale 1.0 1.0 \
-  --distribution_weight 0.5 0.5
-```
+python generate.py --weights_path=output-monet/final-50000.pt --output_dir=output_images-monet --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1" --n_images=50 --bsz=4 --customize_prefix="a painting of" --customize_suffix="Monet style"
+
+### style transfer
+
+CUDA_VISIBLE_DEVICES=1 python generate-control-file.py --weights_path=output/final-50000.pt --output_dir=output_images-monet --pretrained_model_name_or_path="/home/zzj/.cache/huggingface/diffusers/models--runwayml--stable-diffusion-v1-5/snapshots/39593d5650112b4cc580433f6b0435385882d819" --n_images=5 --bsz=4
+
 
 ### Citation
    
