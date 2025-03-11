@@ -62,11 +62,11 @@ python generate.py \
 
 w/o Controlnet
 
-python generate.py --weights_path=output/final-50000.pt --output_dir=output_images --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1" --n_images=50 --bsz=4 --customize_prefix="a painting of" --customize_suffix="Vangogh style"
+python generate.py --weights_path=output-monet/final-50000.pt --output_dir=output_images-monet --pretrained_model_name_or_path="stabilityai/stable-diffusion-2-1" --n_images=50 --bsz=4 --customize_prefix="a painting of" --customize_suffix="Monet style"
 
 w/ Controlnet
 
-CUDA_VISIBLE_DEVICES=1 python generate-control-file.py --weights_path=output/final-50000.pt --output_dir=output_images --pretrained_model_name_or_path="/home/zzj/.cache/huggingface/diffusers/models--runwayml--stable-diffusion-v1-5/snapshots/39593d5650112b4cc580433f6b0435385882d819" --n_images=5 --bsz=4
+CUDA_VISIBLE_DEVICES=1 python generate-control-file.py --weights_path=output/final-50000.pt --output_dir=output_images-monet --pretrained_model_name_or_path="/home/zzj/.cache/huggingface/diffusers/models--runwayml--stable-diffusion-v1-5/snapshots/39593d5650112b4cc580433f6b0435385882d819" --n_images=5 --bsz=4
 
 Generate with scaled standard deviation:
 ```shell
