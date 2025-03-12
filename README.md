@@ -4,7 +4,7 @@ This repo contains the code implementation of the paper:
 
 *DyArtbank: Diverse artistic style transfer via pre-trained stable diffusion and dynamic style prompt Artbank*
 
-[[arXiv](https://arxiv.org/abs/xxxx.xxxx)]
+[[arXiv](https://arxiv.org/abs/2503.08392 )]
 
 ![](/images/image1.png)
 
