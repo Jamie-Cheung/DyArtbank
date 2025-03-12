@@ -98,7 +98,7 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    controlnet = ControlNetModel.from_pretrained("/home/zzj/disk1/zzj/MM2024/DreamDistribution-main/lllyasviel/sd-controlnet-canny", torch_dtype=torch.float16, use_safetensors=False)
+    controlnet = ControlNetModel.from_pretrained("/home/zzj/disk1/zzj/Dyartbank/lllyasviel/sd-controlnet-canny", torch_dtype=torch.float16, use_safetensors=False)
     args = parse_args()
     assert len(args.weights_path) == len(args.std_scale) == len(args.distribution_weight)
 
