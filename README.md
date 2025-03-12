@@ -36,6 +36,8 @@ pip install -r requirements.txt
 
 Place your reference images in a directory, for example `Artworks/monet_water-lilies-1914`, then run the following:
 
+You also can download the collection of artworks (https://drive.google.com/drive/folders/1_2jykbjVCF6SqJisvIt5-4fAFzVAj-F0?usp=drive_link)
+
 ```shell
   accelerate launch train.py \
   --train_data_dir=Artworks/monet_water-lilies-1914 \
