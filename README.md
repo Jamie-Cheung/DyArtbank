@@ -2,7 +2,7 @@
 
 This repo contains the code implementation of the paper:
 
-## DyArtbank: Diverse artistic style transfer via pre-trained stable diffusion and dynamic style prompt Artbank (KBS)
+## DyArtbank: Diverse artistic style transfer via pre-trained stable diffusion and dynamic style prompt Artbank (KBS 2025)
 
 [[arXiv](https://arxiv.org/abs/2503.08392 )]
 
